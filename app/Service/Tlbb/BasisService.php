@@ -12,6 +12,13 @@ use think\cache\driver\Redis;
 
 class BasisService
 {
+    public function sxds()
+    {
+        while (true) {
+            sleep(rand(5, 10));
+            $this->doCrawSxds();
+        }
+    }
     public function doCrawSxds()
     {
         $curl = curl_init();
