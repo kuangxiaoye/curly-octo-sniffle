@@ -24,7 +24,7 @@ class BasisService
         $curl = curl_init();
         $address = "https://tl.sxds.com/detail/";
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://tl.sxds.com/wares/?pageSize=12&gameId=74&goodsTypeId=1&jobsId=331&pages=1',
+            CURLOPT_URL => 'https://tl.sxds.com/wares/?pageSize=12&gameId=74&goodsTypeId=1&pages=1',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
