@@ -16,7 +16,10 @@ class BasisService
     {
         while (true) {
             sleep(rand(5, 10));
-            $this->doCrawSxds();
+            try {
+                $this->doCrawSxds();
+            }catch (\Exception $exception){
+            }
         }
     }
     public function doCrawSxds()
@@ -53,7 +56,10 @@ class BasisService
             $redis = (new Redis());
             $exs = $redis->get($goodsId);
             if (empty($exs)) {
-                (new FangTang())->sc_send("快来看呀！", $address . $goodsId);
+                //旧版 http://sc.ftqq.com/?c=wechat&a=bind
+                (new FangTang())->sc_send("震惊！！有新号上架了！！", $address . $goodsId);
+                //新版 turbo推送 推送给我自己
+                (new FangTang())->sendTurbo("震惊！！有新号上架了！！", $address . $goodsId);
                 $redis->set($goodsId, $goodsId);
             }
         }
