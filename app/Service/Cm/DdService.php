@@ -33,6 +33,7 @@ class DdService extends BaseService
     {
 
         $page = 1;
+        $goodInfoList = [];
         $goodsListAll = [];
         $goodsListByArea = [];
         $goodsListNeed = [];
