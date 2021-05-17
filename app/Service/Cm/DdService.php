@@ -19,6 +19,8 @@ class DdService extends BaseService
         $gameCode = 'u7udm8';
         $goodsType = '1xv82k';
         $game = '天龙八部怀旧';
+        var_dump(123);
+        die(123);
         $this->ddGoodsSync($gameCode, $goodsType, $game);
     }
 
