@@ -21,8 +21,6 @@ class BaseService
     public function getGoodsIdList($gameCode, $goodsType, $page)
     {
         $html = $this->getGoodsIdListPage($gameCode, $goodsType, $page, $minPrice = 100, $maxPrice = 200);
-        var_dump($html);
-        die();
         $goodsInfoList = [];
         $subcrawler = new Crawler($html);
         $subcrawler->filter('.goods-list-item')->each(function ($node) use (&$goodsInfoList) {
@@ -47,7 +45,8 @@ class BaseService
                 'createon' => dateNow(),
             ];
         });
-
+        var_dump($goodsInfoList);
+        die();
         return $goodsInfoList;
     }
 
