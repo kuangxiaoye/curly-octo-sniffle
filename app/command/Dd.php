@@ -3,28 +3,30 @@ declare (strict_types = 1);
 
 namespace app\command;
 
-use app\Service\Cm\SxService;
-use app\Service\Cm\BasisService;
+use app\Service\Cm\DdService;
 use think\console\Command;
 use think\console\Input;
+use think\console\input\Argument;
+use think\console\input\Option;
 use think\console\Output;
 
 /**
- * 爬取神仙代售账号
- * Class Sxds
+ * 维护DD373商品信息
+ * Class Dd
  * @package app\command
  */
-class Sxds extends Command
+class Dd extends Command
 {
     protected function configure()
     {
         // 指令配置
-        $this->setName('sxds')
-            ->setDescription('the sxds command');
+        $this->setName('ddtlbb')
+            ->setDescription('the dd command');
     }
 
     protected function execute(Input $input, Output $output)
     {
-        (new SxService())->sxds();
+        // 指令输出
+        (new DdService())->doSyncTl();
     }
 }
