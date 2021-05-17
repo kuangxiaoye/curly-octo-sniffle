@@ -42,6 +42,8 @@ class DdService extends BaseService
         do {
             try {
                 $goodInfoList = $baseService->getGoodsIdList($gameCode, $goodsType, $page);
+                var_dump($goodInfoList);
+                die();
             } catch (\Exception $exception) {
             }
             $page++;
