@@ -62,11 +62,7 @@ class BaseService
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
-            CURLOPT_HTTPHEADER     => array(
-                'accept-ranges: bytes',
-                'cache-control: private',
-                'Cookie: SERVERID=2fe31cf823059ecc77adea1f4603e43b|1621177848|1621177688; acw_tc=781bad2916211775562378072e2332a036a6c7c188d576af305b578d39caa7',
-            ),
+            CURLOPT_HTTPHEADER     => array(),
         ));
 
         $html = curl_exec($curl);
