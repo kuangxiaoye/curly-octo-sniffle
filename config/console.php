@@ -7,5 +7,6 @@ return [
     'commands' => [
         'sxds' => 'app\command\Sxds',
         'ddtlbb' => 'app\command\Dd',
+        'selenium' => 'app\command\Selenium',
     ],
 ];

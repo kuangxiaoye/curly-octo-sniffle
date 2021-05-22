@@ -4,7 +4,6 @@
 namespace app\Service;
 
 
-use Symfony\Component\CssSelector\CssSelectorConverter;
 use Symfony\Component\DomCrawler\Crawler;
 
 class BaseService
